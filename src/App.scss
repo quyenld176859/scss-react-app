@@ -1,2 +1,6 @@
 @import "style/shared";
-@import "./components/sibar/sidebar.scss";
+@import "style/btnStyle";
+@import "./components/sibar/sidebar";
+@import "./components/hearder/header";
+@import "./components/contents/content";
+@import "./components/contents/content1/learn_redux";

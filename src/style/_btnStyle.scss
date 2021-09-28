@@ -1,0 +1,102 @@
+.btn_neon {
+  position: relative;
+  width: 155px;
+  height: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
+.btn_neon span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: white;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+.btn_neon:hover span {
+  letter-spacing: 3px;
+}
+.btn_neon span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewx(45deg) translatex(0);
+  transition: 0.5s;
+}
+.btn_neon:hover span::before {
+  transform: skewx(45deg) translatex(100px);
+}
+
+.btn_neon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 50%;
+  width: 30px;
+  height: 20px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.btn_neon:hover::before {
+  bottom: 0px;
+  height: 80%;
+  width: 80%;
+  border-radius: 30px;
+}
+:root {
+  --btn_neon_red: #ff1f71;
+  --btn_neon_blue: #2bd2ff;
+  --btn_neon_green: #1eff45;
+}
+.btn_neon_red::before {
+  background: var(--btn_neon_red);
+  box-shadow: 0 0 5px var(--btn_neon_red), 0 0 15px var(--btn_neon_red), 0 0 30px var(--btn_neon_red), 0 0 60px var(--btn_neon_red);
+}
+.btn_neon_blue::before {
+  background: var(--btn_neon_blue);
+  box-shadow: 0 0 5px var(--btn_neon_blue), 0 0 15px var(--btn_neon_blue), 0 0 30px var(--btn_neon_blue), 0 0 60px var(--btn_neon_blue);
+}
+.btn_neon_green::before {
+  background: var(--btn_neon_green);
+  box-shadow: 0 0 5px var(--btn_neon_green), 0 0 15px var(--btn_neon_green), 0 0 30px var(--btn_neon_green), 0 0 60px var(--btn_neon_green);
+}
+/***********************************************************************/
+
+.btn_outline {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  padding: 0.75em 1.5em;
+}
+.btn_outline_out {
+  color: #386397;
+  outline: 2px solid #386397;
+  border: 2px solid #386397;
+  outline-offset: -2px;
+  transition: outline-offset 0.25s ease;
+}
+.btn_outline_out:hover,
+.btn_outline_out:focus {
+  outline-offset: 2px;
+}

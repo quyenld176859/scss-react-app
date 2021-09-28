@@ -1,0 +1,35 @@
+:root {
+  scroll-padding-top: 10px;
+}
+
+.header {
+  background: $bgHeaderColor;
+  height: $headerHeight;
+  width: -webkit-fill-available;
+  margin-left: $sideBarWidth;
+  position: fixed;
+  top: 0;
+}
+
+.btn_choice {
+  position: relative;
+  cursor: pointer;
+
+  & .dropdownlist {
+    position: absolute;
+    width: max-content;
+    background-color: rgb(230, 230, 230);
+    top: calc(100% + 5px);
+    left: 0px;
+    display: none;
+    & > div {
+      padding: 10px;
+      &:hover {
+        background-color: aliceblue;
+      }
+    }
+  }
+  &:focus .dropdownlist {
+    display: block;
+  }
+}
